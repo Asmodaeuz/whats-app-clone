@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+
+    <!-- Adding a font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Importing "normalize" to make the page more consistent between browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <!-- Adding FontAwesome's script to use some icons for the customization of the page -->
+    <script src="https://kit.fontawesome.com/fe67f3979e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <div class="left_side_wrapper conversations--screen">
+            <header>
+                <nav id="navbar" class="header generalChatsArea--header">
+                    <div role="button" title="Your profile picture">
+                        <img id="userPfp" class="profilePicture header--profile__picture" src="" alt="">
+                    </div>
+                    <div class="general--icons">
+                        <div class="icons__border" role="button" onclick="toggleActive()"
+                            title="Click here to access the community section">
+                            <i class="icon icons__comunity fa-solid fa-users"></i>
+                        </div>
+                        <div class="icons__border" role="button" onclick="toggleActive()"
+                            title="Click here to access the status section">
+                            <i class="icon icons__status fa-regular fa-circle"></i>
+                        </div>
+                        <div class="icons__border" role="button" onclick="toggleActive()"
+                            title="Click here to access the message section">
+                            <i class="icon icons__message fa-solid fa-message"></i>
+                        </div>
+                        <div class="icons__border" role="button" onclick="toggleActive(), toggleSelect()"
+                            title="Click here to access the options section">
+                            <i class="icon icons__options fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <select id="userSelect" onchange="changeUser(event)"
+                            title="Click here to change users"></select>
+                    </div>
+                </nav>
+                <div class="searchbar">
+                    <div class="searchbar--container text--area__container">
+                        <i class="icon fa-solid fa-magnifying-glass" role="button"
+                            title="Click here to search amongst all your chats and groups"></i>
+                        <input type="search" name="searchbar" class="searchbar--area text--area__box"
+                            placeholder="Type here to search all chats and groups">
+                    </div>
+                </div>
+            </header>
+            <div id="chatsPanel">
+                <div id="generalChatsArea"></div>
+            </div>
+        </div>
+        <div class="right_side_wrapper privateChats--screen closedMobile">
+            <div class="light-border"></div>
+            <div id="noChatScreen" class="open">
+                <div class="intro--image">
+                    <img src="./src/noChat_background.svg" alt="">
+                </div>
+                <div class="intro--text">
+                    <h1>WhatsUp Web</h1>
+                    <p>Send and receive messages without having to keep
+                        your smartphone conected to the internet.
+                        <br>Use WhatsUp in up to four conected devices
+                        and one smartphoneat the same time.
+                    </p>
+                </div>
+                <div class="criptography--text">
+                    <i class="fa-solid fa-lock"></i>
+                    <small> Protected with end to end criptography</small>
+                </div>
+            </div>
+            <div id="chatScreen">
+                <div id="individualChatsPanel">
+                    <header class="header individualChatsArea--header">
+                        <div class="contact--inChat">
+                            <div class="div--pfp" onclick="toggleChatMobile()" role="button" title="Your profile picture">
+                                <div class="icons__border back--button display-m" role="button" onclick="toggleActive()"
+                                    title="Click here to search in this chat">
+                                    <i class="icon icons__back display-m fa-solid fa-angle-left"></i>
+                                </div>  
+                                <img class="profilePicture header--profile__picture inChat__picture" src="" alt="">
+                            </div>
+                            <div class="inChat__info">
+                                <h3 class="contact--info__name"></h3>
+                                <small class="contact--info__number"></small>
+                            </div>
+                        </div>
+                        <div class="general--icons">
+                            <div class="icons__border" role="button" onclick="toggleActive()"
+                                title="Click here to search in this chat">
+                                <i class="icon icons__search fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="icons__border" role="button" onclick="toggleActive()"
+                                title="Click here to access the options section">
+                                <i class="icon icons__options fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                    </header>
+                    <div id="individualChatsArea" class="chat">
+                        <div class="background--overlay solid"></div>
+                        <div class="background--overlay opaque"></div>
+                        <div id="chat_bg">
+                            <div class="chat--default__background"></div>
+                        </div>
+                        <div id="chatDisplay"></div>
+                    </div>
+                    <footer class="footer">
+                        <div class="general--icons">
+                            <div class="icons__border" role="button" onclick="toggleActive()"
+                                title="Click here to open the emojis tap">
+                                <i class="icon icons__emoji fa-regular fa-face-laugh-beam"></i>
+                            </div>
+                            <div class="icons__border" role="button" onclick="toggleActive()"
+                                title="Click here to insert an attachment">
+                                <i class="icon icons__attachment fa-solid fa-paperclip"></i>
+                            </div>
+                        </div>
+                        <div class="message--container text--area__container">
+                            <textarea oninput="toggleDisplay(event)" onkeydown="getNewMessage(event)" id="chatInput"
+                                name="textarea" title="Type your message here" placeholder="Message"></textarea>
+                        </div>
+                        <div class="general--icons">
+                            <div class="icons__border" role="button" onclick="toggleActive()"
+                                title="Click here to record a voice message">
+                                <i class="icon icons__mic fa-solid fa-microphone show"></i>
+                                <i class="icon icons__send fa-solid fa-location-arrow hide"></i>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="functions/generalFunctions.js"></script>
+    <script src="functions/data.js"></script>
+    <script src="functions/pageFunctions.js"></script>
+    <script src="functions/chatFunctions.js"></script>
+</body>
+
+</html>
