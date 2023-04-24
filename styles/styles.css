@@ -356,7 +356,7 @@ BOFRE CLICKING ON ANY CHAT */
 #individualChatsPanel {
     display: flex;
     flex-direction: column;
-    height: 10vh;
+    height: 100vh;
     padding-bottom: 40px;
 }
 
