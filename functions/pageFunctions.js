@@ -11,8 +11,13 @@ function initPage() {
     userPfp.src = currentUser.profilePicture
 
     // RETURNING ONLY THE CHATS THAT THE CURRENT USER HAS
-    const chats = Chats.filter(chat => {
-        if (chat.participants.some(participant => participant.id == currentUser.id)) {
+    const savedChats = ChatList.map(chat => {
+        const saved = JSON.parse(localStorage.getItem(`Chat${chat}`)) || Chats.find(c => c.id == chat)
+        return saved
+    })
+
+    const chats = savedChats.filter(chat => {
+        if (chat.participants?.some(participant => participant.id == currentUser.id)) {
             return true
         }
         return false

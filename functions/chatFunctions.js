@@ -86,11 +86,14 @@ function openChat(selectedChat) {
 
     //SAVING THE CURRENT CHAT INFORMATION IN A VARIABLE TO PASS TO LOCAL STORAGE
     chatInfo = {
-        chatId: currentChat,
-        messages: messagesArray
+        id: currentChat,
+        messages: messagesArray,
+        participants: Chats.
+            find(chat => chat.id == currentChat).participants
     }
+    
     // SAVING IN LOCAL STORAGE
-    localStorage.setItem(`Chat${currentChat}`, JSON.stringify(chatInfo));
+    localStorage.setItem(`Chat${currentChat}`, JSON.stringify(chatInfo))
 
     loadMessages(messagesArray)
     return currentChat, messagesArray
@@ -152,15 +155,16 @@ function getNewMessage(event) {
 function sendMessage(newMessage) {
     //SAVING THE CURRENT CHAT INFORMATION IN A VARIABLE TO PASS TO LOCAL STORAGE
     chatInfo = {
-        chatId: currentChat,
+        id: currentChat,
         messages: messagesArray.concat([newMessage]),
-        lastMessage: newMessage.content
+        lastMessage: newMessage.content,
+        participants: Chats.
+            find(chat => chat.id == currentChat).participants
     }
 
     let currentChatCard = selectedChat.getAttribute("id")
     let preview = document.getElementById(currentChatCard).querySelector(".preview__message")
     preview.innerHTML = chatInfo.lastMessage
-    console.log(preview)
 
     // Save the chat information in local storage
     let data = chatInfo

@@ -65,6 +65,8 @@ const Users = [
 
 let currentUser = AlessandroCorrea
 
+const ChatList = [2310767007, 3820756568, 4003635723, 1042391752, 743582593, 4115625287]
+
 // DEFINES EACH OF THE CONVERSATIONS WITH EACH CONTACTS AS A CHAT
 const Chats = [
     {
