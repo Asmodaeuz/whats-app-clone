@@ -72,10 +72,13 @@ const Chats = [
     {
         id: 2310767007,
         messages: [
-            new Message(getUniqueId(), "Onde fica a New Age GG?", displayDateTime(getRandomDate()), LauraHartley.id),
-            new Message(getUniqueId(), "Lá na Rua do Canal 178 (Recreio Bandeirantes)", displayDateTime(getRandomDate()), AlessandroCorrea.id),
-            new Message(getUniqueId(), "Será que posso dar uma passada lá?", displayDateTime(getRandomDate()), LauraHartley.id),
-            new Message(getUniqueId(), "Não sei mas seria legal conhecer!", displayDateTime(getRandomDate()), AlessandroCorrea.id)
+            new Message(getUniqueId(), "Hey there, old chap! How's life treating you?", displayDateTime(getRandomDate()), LauraHartley.id),
+            new Message(getUniqueId(), "I'm doing pretty good, just had this amazing steak and ale pie for lunch. You gotta try it sometime!", displayDateTime(getRandomDate()), AlessandroCorrea.id),
+            new Message(getUniqueId(), "Ahh, that sounds so good! I'm actually feeling knackered, though. Think I might need a cuppa to keep me going.", displayDateTime(getRandomDate()), LauraHartley.id),
+            new Message(getUniqueId(), "Definitely. And if you change your mind, I've got some pie left.", displayDateTime(getRandomDate()), AlessandroCorrea.id),
+            new Message(getUniqueId(), "Haha, thanks mate. But I think I'll have to pass this time. Got some meetings later and need a quick power nap.", displayDateTime(getRandomDate()), LauraHartley.id),
+            new Message(getUniqueId(), "No worries, my dear. Catch you later, yeah?", displayDateTime(getRandomDate()), AlessandroCorrea.id),
+            new Message(getUniqueId(), "Lovely!", displayDateTime(getRandomDate()), LauraHartley.id)
         ],
         participants: [AlessandroCorrea, LauraHartley],
         lastMessage: ""
@@ -83,8 +86,10 @@ const Chats = [
     {
         id: 3820756568,
         messages: [
-            new Message(getUniqueId(), "Já ouviu falar na New Age?", displayDateTime(getRandomDate()), SunwooHan.id),
-            new Message(getUniqueId(), "Claro que sim!", displayDateTime(getRandomDate()), AlessandroCorrea.id),
+            new Message(getUniqueId(), "안녕 선우! 어떻게 지내니?", displayDateTime(getRandomDate()), AlessandroCorrea.id),
+            new Message(getUniqueId(), "안녕 알레산드로! 나쁘지 않아요. 나는 조금 바빴지만 더 긴장을 풀려고 노력하고 있습니다.", displayDateTime(getRandomDate()), SunwooHan.id),
+            new Message(getUniqueId(), "정말로? 이번 주말에 좀 더 자유 시간이 있는 것 같아요. 영화 같은 걸 볼까 생각 중이에요.", displayDateTime(getRandomDate()), AlessandroCorrea.id),
+            new Message(getUniqueId(), "좋은 생각이야! 최근에 '이번 생은 처음이라'라는 드라마를 봤는데 정말 재미있었어요. 같이 보시면 좋을 것 같은데 어떠세요?", displayDateTime(getRandomDate()), SunwooHan.id),
         ],
         participants: [AlessandroCorrea, SunwooHan],
         lastMessage: ""
@@ -92,7 +97,7 @@ const Chats = [
     {
         id: 4003635723,
         messages: [
-            new Message(getUniqueId(), "A New Age tá pra abrir um campeonato novo de Fortnite. Topa?", displayDateTime(getRandomDate()), VincentFabron.id)
+            new Message(getUniqueId(), "Hey mon pote ! Ça te dit de venir prendre un verre en terrasse avec moi ce soir ? On profite du beau temps ensemble et on se raconte nos dernières aventures. Si t'es partant, on se retrouve à 19h à la brasserie près de la place de la République.", displayDateTime(getRandomDate()), VincentFabron.id)
         ],
         participants: [AlessandroCorrea, VincentFabron],
         lastMessage: ""
@@ -100,7 +105,7 @@ const Chats = [
     {
         id: 1042391752,
         messages: [
-            new Message(getUniqueId(), "E aí! Vincent já falou contigo?", displayDateTime(getRandomDate()), AlessandroCorrea.id)
+            new Message(getUniqueId(), "よー！ヴィンセントはもうあなたに話した?", displayDateTime(getRandomDate()), AlessandroCorrea.id)
         ],
         participants: [AlessandroCorrea, RyoKiritani],
         lastMessage: ""
@@ -108,8 +113,8 @@ const Chats = [
     {
         id: 743582593,
         messages: [
-            new Message(getUniqueId(), "Noite das meninas ainda de pé?", displayDateTime(getRandomDate()), KlaraBohringer.id),
-            new Message(getUniqueId(), "Acho que sim. Vou chamar a Ling também!", displayDateTime(getRandomDate()), SunwooHan.id)
+            new Message(getUniqueId(), "Steht der mädelsabend immer noch?", displayDateTime(getRandomDate()), KlaraBohringer.id),
+            new Message(getUniqueId(), "응, 그럴 거 같아. 린도 같이 초대할게!", displayDateTime(getRandomDate()), SunwooHan.id)
         ],
         participants: [SunwooHan, KlaraBohringer],
         lastMessage: ""
@@ -117,8 +122,8 @@ const Chats = [
     {
         id: 4115625287,
         messages: [
-            new Message(getUniqueId(), "Noite das meninas este fim de semana? A Killjoy já topou :p", displayDateTime(getRandomDate()), SunwooHan.id),
-            new Message(getUniqueId(), "Eu acho que tenho espaço na agenda. Mas sem exageros!", displayDateTime(getRandomDate()), LingYingWei.id)
+            new Message(getUniqueId(), "이번 주말에 여자들끼리 모이는 거 어때? Killjoy는 이미 찬성했어 :p", displayDateTime(getRandomDate()), SunwooHan.id),
+            new Message(getUniqueId(), "我想我还有空，不过不要太夸张哦！", displayDateTime(getRandomDate()), LingYingWei.id)
         ],
         participants: [SunwooHan, LingYingWei],
         lastMessage: ""
