@@ -2,6 +2,8 @@
 
 ## A WhatsApp clone made entirely with HTML, CSS and vanilla JavaScript
 
+![A screenshot of the project](whatsapp-vanilla-clone.png)
+
 ### Disclaimer
 
 This project was created using HTML for page markup, CSS for stylization, and vanilla JavaScript for everything else.
